@@ -1,32 +1,34 @@
 // convert binary numbers to decimal and decimal numbers to binary.
 
 public class Conversion {
-    public  static void bin2dec(int n){
-        int binN = n;
-        int pow =0, decN=0;
 
-        while(binN>0){
-            int ld= binN%10;
-            decN = decN + (ld * (int)Math.pow(2,pow));
+    // Method to convert binary number to decimal
+    public static void bin2dec(int n) {
+        int binN = n;
+        int pow = 0, decN = 0;
+
+        while (binN > 0) {
+            int ld = binN % 10;
+            decN = decN + (ld * (int) Math.pow(2, pow));
             pow++;
-            binN=binN/10;
+            binN = binN / 10;
         }
-        System.out.println(" Decimal of " + n + " is - " + decN );
+        System.out.println("Decimal of " + n + " is - " + decN);
     }
 
-    public  static void dec2bin(int n){
-        int pow=0;
-        int binN=0;
+    // Method to convert decimal number to binary
+    public static void dec2bin(int n) {
+        int pow = 0;
+        int binN = 0;
+        int originalN = n;  // Save the original value of n
 
-        while(n>0){
-             int r = n%2;
-             binN = binN + (r * (int)Math.pow(10,pow));
-             pow++;
-             n=n/2;
+        while (n > 0) {
+            int r = n % 2;
+            binN = binN + (r * (int) Math.pow(10, pow));
+            pow++;
+            n = n / 2;
         }
-        System.out.println(" Binary form of " + n + " is - " + binN
-        );
-
+        System.out.println("Binary form of " + originalN + " is - " + binN);
     }
 
     public static void main(String[] args) {
