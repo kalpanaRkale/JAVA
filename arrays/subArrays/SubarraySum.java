@@ -39,5 +39,5 @@ public class SubarraySum {
         prefixSumArray(arr2);
     }
 }
-//Time Complexity: O(n<sup>2</sup>)
-//Space Complexity: O(n)
+//Time Complexity: O(n^2) - Due to the nested loops iterating over the subarray ranges.
+//Space Complexity: O(n) - For storing the prefix sum array.
